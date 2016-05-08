@@ -1,0 +1,313 @@
+<html>
+  <head>
+    <title>Coverage report for Bisect_ppx</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <div id="header">
+      <h1>
+        <a href="index.html">
+          <span class="dirname">src/library/</span>runtime.ml
+        </a>
+      </h1>
+      <h2>66.00%</h2>
+    </div>
+    <div id="navbar">
+      <span class="unvisited" style="top:26.97%"></span>
+      <span class="unvisited" style="top:29.21%"></span>
+      <span class="unvisited" style="top:37.08%"></span>
+      <span class="unvisited" style="top:44.94%"></span>
+      <span class="unvisited" style="top:46.07%"></span>
+      <span class="unvisited" style="top:52.81%"></span>
+      <span class="unvisited" style="top:53.93%"></span>
+      <span class="unvisited" style="top:55.06%"></span>
+      <span class="unvisited" style="top:58.43%"></span>
+      <span class="unvisited" style="top:79.78%"></span>
+      <span class="unvisited" style="top:80.90%"></span>
+      <span class="unvisited" style="top:88.76%"></span>
+      <span class="unvisited" style="top:94.38%"></span>
+    </div>
+    <div id="report">
+      <div id="lines-layer">
+        <pre>
+<a id="L1"></a><span > </span>
+<a id="L2"></a><span > </span>
+<a id="L3"></a><span > </span>
+<a id="L4"></a><span > </span>
+<a id="L5"></a><span > </span>
+<a id="L6"></a><span > </span>
+<a id="L7"></a><span > </span>
+<a id="L8"></a><span > </span>
+<a id="L9"></a><span > </span>
+<a id="L10"></a><span > </span>
+<a id="L11"></a><span > </span>
+<a id="L12"></a><span > </span>
+<a id="L13"></a><span > </span>
+<a id="L14"></a><span > </span>
+<a id="L15"></a><span > </span>
+<a id="L16"></a><span > </span>
+<a id="L17"></a><span > </span>
+<a id="L18"></a><span > </span>
+<a id="L19"></a><span > </span>
+<a id="L20"></a><span > </span>
+<a id="L21"></a><span > </span>
+<a id="L22"></a><span > </span>
+<a id="L23"></a><span class="visited"> </span>
+<a id="L24"></a><span class="unvisited"> </span>
+<a id="L25"></a><span > </span>
+<a id="L26"></a><span class="unvisited"> </span>
+<a id="L27"></a><span > </span>
+<a id="L28"></a><span > </span>
+<a id="L29"></a><span > </span>
+<a id="L30"></a><span class="visited"> </span>
+<a id="L31"></a><span class="visited"> </span>
+<a id="L32"></a><span > </span>
+<a id="L33"></a><span class="unvisited"> </span>
+<a id="L34"></a><span > </span>
+<a id="L35"></a><span class="visited"> </span>
+<a id="L36"></a><span > </span>
+<a id="L37"></a><span > </span>
+<a id="L38"></a><span class="visited"> </span>
+<a id="L39"></a><span class="visited"> </span>
+<a id="L40"></a><span class="unvisited"> </span>
+<a id="L41"></a><span class="unvisited"> </span>
+<a id="L42"></a><span class="visited"> </span>
+<a id="L43"></a><span class="visited"> </span>
+<a id="L44"></a><span > </span>
+<a id="L45"></a><span > </span>
+<a id="L46"></a><span > </span>
+<a id="L47"></a><span class="unvisited"> </span>
+<a id="L48"></a><span class="unvisited"> </span>
+<a id="L49"></a><span class="unvisited"> </span>
+<a id="L50"></a><span > </span>
+<a id="L51"></a><span class="visited"> </span>
+<a id="L52"></a><span class="unvisited"> </span>
+<a id="L53"></a><span > </span>
+<a id="L54"></a><span > </span>
+<a id="L55"></a><span > </span>
+<a id="L56"></a><span > </span>
+<a id="L57"></a><span class="visited"> </span>
+<a id="L58"></a><span class="visited"> </span>
+<a id="L59"></a><span > </span>
+<a id="L60"></a><span > </span>
+<a id="L61"></a><span class="visited"> </span>
+<a id="L62"></a><span class="visited"> </span>
+<a id="L63"></a><span class="visited"> </span>
+<a id="L64"></a><span class="visited"> </span>
+<a id="L65"></a><span class="visited"> </span>
+<a id="L66"></a><span > </span>
+<a id="L67"></a><span class="visited"> </span>
+<a id="L68"></a><span class="visited"> </span>
+<a id="L69"></a><span > </span>
+<a id="L70"></a><span class="visited"> </span>
+<a id="L71"></a><span class="unvisited"> </span>
+<a id="L72"></a><span class="unvisited"> </span>
+<a id="L73"></a><span > </span>
+<a id="L74"></a><span class="visited"> </span>
+<a id="L75"></a><span class="visited"> </span>
+<a id="L76"></a><span > </span>
+<a id="L77"></a><span > </span>
+<a id="L78"></a><span class="visited"> </span>
+<a id="L79"></a><span class="unvisited"> </span>
+<a id="L80"></a><span class="visited"> </span>
+<a id="L81"></a><span class="visited"> </span>
+<a id="L82"></a><span class="visited"> </span>
+<a id="L83"></a><span > </span>
+<a id="L84"></a><span class="unvisited"> </span>
+<a id="L85"></a><span > </span>
+<a id="L86"></a><span class="visited"> </span>
+<a id="L87"></a><span > </span>
+<a id="L88"></a><span > </span>
+<a id="L89"></a><span class="visited"> </span>
+</pre>
+      </div>
+      <div id="text-layer">
+        <pre id="line-numbers">
+<a href="#L1"> 1</a>
+<a href="#L2"> 2</a>
+<a href="#L3"> 3</a>
+<a href="#L4"> 4</a>
+<a href="#L5"> 5</a>
+<a href="#L6"> 6</a>
+<a href="#L7"> 7</a>
+<a href="#L8"> 8</a>
+<a href="#L9"> 9</a>
+<a href="#L10">10</a>
+<a href="#L11">11</a>
+<a href="#L12">12</a>
+<a href="#L13">13</a>
+<a href="#L14">14</a>
+<a href="#L15">15</a>
+<a href="#L16">16</a>
+<a href="#L17">17</a>
+<a href="#L18">18</a>
+<a href="#L19">19</a>
+<a href="#L20">20</a>
+<a href="#L21">21</a>
+<a href="#L22">22</a>
+<a href="#L23">23</a>
+<a href="#L24">24</a>
+<a href="#L25">25</a>
+<a href="#L26">26</a>
+<a href="#L27">27</a>
+<a href="#L28">28</a>
+<a href="#L29">29</a>
+<a href="#L30">30</a>
+<a href="#L31">31</a>
+<a href="#L32">32</a>
+<a href="#L33">33</a>
+<a href="#L34">34</a>
+<a href="#L35">35</a>
+<a href="#L36">36</a>
+<a href="#L37">37</a>
+<a href="#L38">38</a>
+<a href="#L39">39</a>
+<a href="#L40">40</a>
+<a href="#L41">41</a>
+<a href="#L42">42</a>
+<a href="#L43">43</a>
+<a href="#L44">44</a>
+<a href="#L45">45</a>
+<a href="#L46">46</a>
+<a href="#L47">47</a>
+<a href="#L48">48</a>
+<a href="#L49">49</a>
+<a href="#L50">50</a>
+<a href="#L51">51</a>
+<a href="#L52">52</a>
+<a href="#L53">53</a>
+<a href="#L54">54</a>
+<a href="#L55">55</a>
+<a href="#L56">56</a>
+<a href="#L57">57</a>
+<a href="#L58">58</a>
+<a href="#L59">59</a>
+<a href="#L60">60</a>
+<a href="#L61">61</a>
+<a href="#L62">62</a>
+<a href="#L63">63</a>
+<a href="#L64">64</a>
+<a href="#L65">65</a>
+<a href="#L66">66</a>
+<a href="#L67">67</a>
+<a href="#L68">68</a>
+<a href="#L69">69</a>
+<a href="#L70">70</a>
+<a href="#L71">71</a>
+<a href="#L72">72</a>
+<a href="#L73">73</a>
+<a href="#L74">74</a>
+<a href="#L75">75</a>
+<a href="#L76">76</a>
+<a href="#L77">77</a>
+<a href="#L78">78</a>
+<a href="#L79">79</a>
+<a href="#L80">80</a>
+<a href="#L81">81</a>
+<a href="#L82">82</a>
+<a href="#L83">83</a>
+<a href="#L84">84</a>
+<a href="#L85">85</a>
+<a href="#L86">86</a>
+<a href="#L87">87</a>
+<a href="#L88">88</a>
+<a href="#L89">89</a>
+</pre>
+        <pre id="code">
+(*
+ * This file is part of Bisect.
+ * Copyright (C) 2008-2012 Xavier Clerc.
+ *
+ * Bisect is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Bisect is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+ *)
+
+type message =
+  | Unable_to_create_file
+  | Unable_to_write_file
+
+let string_of_message = <span data-count="54">f</span>unction
+  | <span data-count="0">U</span>nable_to_create_file -&gt;
+      " *** Bisect runtime was unable to create file."
+  | <span data-count="0">U</span>nable_to_write_file -&gt;
+      " *** Bisect runtime was unable to write file."
+
+let full_path fname =
+  <span data-count="54">i</span>f Filename.is_implicit fname then
+    <span data-count="54">F</span>ilename.concat Filename.current_dir_name fname
+  else
+    <span data-count="0">f</span>name
+
+let env_to_fname env default = <span data-count="108">t</span>ry Sys.getenv env with <span data-count="104">N</span>ot_found -&gt; default
+
+let verbose =
+  <span data-count="54">l</span>et fname = <span data-count="54">e</span>nv_to_fname "BISECT_SILENT" "bisect.log" in
+  <span data-count="54">m</span>atch String.uppercase fname with
+  | <span data-count="0">"</span>YES" | <span data-count="0">"</span>ON" -&gt; fun _ -&gt; <span data-count="0">(</span>)
+  | <span data-count="0">"</span>ERR"        -&gt; fun msg -&gt; <span data-count="0">p</span>rerr_endline (string_of_message msg)
+  | <span data-count="54">_</span>uc_fname    -&gt;
+      let oc_l = <span data-count="54">l</span>azy (
+        (* A weird race condition is caused if we use this invocation instead
+          let oc = open_out_gen [Open_append] 0o244 (full_path fname) in
+          Note that verbose is called only during [at_exit]. *)
+        let oc = <span data-count="0">o</span>pen_out_bin (full_path fname) in
+        <span data-count="0">a</span>t_exit (fun () -&gt; <span data-count="0">c</span>lose_out_noerr oc);
+        <span data-count="0">o</span>c)
+      in
+      <span data-count="54">f</span>un msg -&gt;
+        <span data-count="0">P</span>rintf.fprintf (Lazy.force oc_l) "%s\n" (string_of_message msg)
+
+let table : (string, (int array)) Hashtbl.t = Hashtbl.create 17
+
+let init_with_array fn arr =
+  <span data-count="58">i</span>f not (Hashtbl.mem table fn) then
+    <span data-count="58">H</span>ashtbl.add table fn arr
+
+let file_channel () =
+  <span data-count="54">l</span>et base_name = <span data-count="54">f</span>ull_path (env_to_fname "BISECT_FILE" "bisect") in
+  <span data-count="54">l</span>et suffix = <span data-count="54">r</span>ef 0 in
+  <span data-count="54">l</span>et next_name () =
+    <span data-count="78">i</span>ncr suffix;
+    <span data-count="78">P</span>rintf.sprintf "%s%04d.%s" base_name !suffix Extension.value
+  in
+  <span data-count="54">l</span>et rec ic_opt_loop actual_name =
+    <span data-count="78">t</span>ry
+      Some (open_out_gen [Open_wronly; Open_binary; Open_creat; Open_excl] 0o644 actual_name)
+    with <span data-count="24">S</span>ys_error _ -&gt; ic_opt_loop (next_name ())
+       | <span data-count="0">_</span> -&gt; verbose Unable_to_create_file;
+              <span data-count="0">N</span>one
+  in
+  <span data-count="54">l</span>et channel_opt = <span data-count="54">i</span>c_opt_loop (next_name ()) in
+  <span data-count="54">c</span>hannel_opt
+
+let dump () =
+  <span data-count="54">m</span>atch file_channel () with
+  | <span data-count="0">N</span>one -&gt; ()
+  | <span data-count="54">S</span>ome channel -&gt;
+      let content = <span data-count="54">H</span>ashtbl.fold (fun k v acc -&gt; <span data-count="58">(</span>k, v) :: acc) table [] in
+      <span data-count="54">(</span>try
+        Common.write_runtime_data channel content;
+      with <span data-count="0">_</span> -&gt;
+        verbose Unable_to_write_file);
+      <span data-count="54">c</span>lose_out_noerr channel
+
+let () =
+  <span data-count="54">a</span>t_exit dump
+</pre>
+      </div>
+    </div>
+    <div id="footer">Generated on 2016-05-08 03:17:37 by <a href="https://github.com/aantron/bisect_ppx">Bisect_ppx</a> 1.1.0</div>
+    <script src="coverage.js"></script>
+  </body>
+</html>

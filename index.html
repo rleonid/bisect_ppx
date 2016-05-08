@@ -1,0 +1,101 @@
+<html><head>
+
+<meta charset="utf-8">
+
+<title>Bisect_ppx - Code coverage for OCaml</title>
+<meta name="description" content="Code coverage for OCaml with nice HTML reports. Done by means of
+               a ppx extension.">
+<link rel="canonical" href="https://github.com/aantron/bisect_ppx">
+
+<link rel="stylesheet" href="https://sindresorhus.com/github-markdown-css/github-markdown.css">
+
+<style>
+.markdown-body {
+    box-sizing: border-box;
+    min-width: 200px;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 45px;
+}
+
+#css-attribution {
+    margin-top: 5em;
+    opacity: 0.5;
+}
+</style>
+
+</head>
+<body class="markdown-body">
+
+<a href="https://github.com/aantron/bisect_ppx"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/567c3a48d796e2fc06ea80409cc9dd82bf714434/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png"></a>
+
+<h1>Bisect_ppx</h1>
+
+<p><a href="https://github.com/aantron/bisect_ppx">Bisect_ppx</a> is a code coverage tool for OCaml. It helps you test
+thoroughly by showing which parts of your code are <strong>not</strong> tested. You can also
+use it for tracing: run one test, and see what is visited.</p>
+<p><a href="http://aantron.github.io/bisect_ppx/coverage/"><img src="https://raw.githubusercontent.com/aantron/bisect_ppx/master/doc/sample.gif" alt="Bisect_ppx usage example"></a></p>
+<br>
+<p>For a live demonstration, see the <a href="http://aantron.github.io/bisect_ppx/coverage/">coverage report</a> Bisect_ppx
+generates for itself. You may also want to see
+<a href="#bisect_ppx-in-practice">projects that use Bisect_ppx</a>.</p>
+<br>
+<h2 id="Instructions">Instructions</h2>
+
+<p>Most of these commands go in a <code>Makefile</code> or other script, so that you only have
+to run that script, then refresh your browser.</p>
+<ol><li><p>Install Bisect_ppx.</p>
+<pre><code>opam install bisect_ppx</code></pre><p>You can also install <a href="https://github.com/aantron/bisect_ppx/blob/master/doc/advanced.md#WithoutOPAM">without OPAM</a>.</p>
+</li><li><p>When compiling for testing, include Bisect_ppx. Instructions are also
+ available <a href="https://github.com/aantron/bisect_ppx/blob/master/doc/advanced.md#Ocamlbuild">for Ocamlbuild</a> and <a href="https://github.com/aantron/bisect_ppx/blob/master/doc/advanced.md#OASIS">for OASIS</a>.</p>
+<pre><code>ocamlfind c -package bisect_ppx -c my_code.ml
+ocamlfind c -c my_tests.ml
+ocamlfind c -linkpkg -package bisect_ppx my_code.cmo my_tests.cmo</code></pre></li><li><p>Run your test binary. In addition to testing your code, it will produce one
+ or more files with names like <code>bisect0001.out</code>.</p>
+<pre><code>./a.out             # Produces bisect0001.out</code></pre></li><li><p>Generate the coverage report.</p>
+<pre><code>bisect-ppx-report -I build/ -html coverage/ bisect*.out`</code></pre></li><li><p>Open <code>coverage/index.html</code>!</p>
+</li></ol>
+
+<p>You can submit a coverage report to Coveralls.io using <a href="https://github.com/sagotch/ocveralls">ocveralls</a>.
+Note that Bisect_ppx reports are more precise than Coveralls, which only
+considers whole lines as visited or not.</p>
+<p>See also the <a href="https://github.com/aantron/bisect_ppx/blob/master/doc/advanced.md">advanced usage</a>.</p>
+<br>
+<h2 id="Bisectppxinpractice">Bisect_ppx in practice</h2>
+
+<p>A small sample of projects using Bisect_ppx:</p>
+<ul><li><a href="https://github.com/hammerlab/oml">Oml</a>: <a href="https://coveralls.io/github/hammerlab/oml?branch=HEAD">report</a></li><li><a href="https://github.com/ocamllabs/ocaml-ctypes">ctypes</a>: <a href="https://coveralls.io/github/ocamllabs/ocaml-ctypes">report</a></li><li><a href="https://github.com/johnelse/ocaml-irc-client">ocaml-irc-client</a>: <a href="https://coveralls.io/github/johnelse/ocaml-irc-client">report</a></li><li><a href="https://github.com/aantron/markup.ml">Markup.ml</a>: <a href="https://coveralls.io/github/aantron/markup.ml?branch=master">report</a></li><li><a href="https://github.com/hammerlab/ketrew">Ketrew</a></li><li><a href="https://github.com/hammerlab/sosa">Sosa</a></li></ul>
+
+<br>
+<h2 id="RelationtoBisect">Relation to Bisect</h2>
+
+<p>Bisect_ppx is an advanced fork of the excellent <a href="http://bisect.x9c.fr/">Bisect</a> by Xavier
+Clerc. As of the time of this writing, it appears that the original Bisect is
+no longer maintained.</p>
+<p>Considerable work has been done on Bisect_ppx, so that it is now a distinct
+project. In terms of the interface, Bisect_ppx is still largely compatible with
+Bisect's ppx mode, but see <a href="https://github.com/aantron/bisect_ppx/blob/master/doc/advanced.md#Differences">here</a> for a list of differences.</p>
+<p>If you use Camlp4, you will want to use the original Bisect.</p>
+<br>
+<h2 id="License">License</h2>
+
+<p>Bisect_ppx is distributed under the terms of the
+<a href="https://github.com/aantron/bisect_ppx/blob/master/doc/COPYING">GPL license, version 3</a>. Note, however, that Bisect_ppx does not
+"contaminate" your project with the terms of the GPL, because it is a
+development tool used only during testing. You would not want to link Bisect_ppx
+into your release files anyway, for performance reasons.</p>
+<br>
+<h2 id="Contributing">Contributing</h2>
+
+<p>Bug reports and pull requests are warmly welcome. Bisect_ppx is developed on
+GitHub, so please <a href="https://github.com/aantron/bisect_ppx/issues">open an issue</a>.</p>
+<p>To get the latest development version of Bisect_ppx using OPAM, run</p>
+<pre><code>opam source --dev-repo --pin bisect_ppx</code></pre>
+
+<p>You will now have a <code>bisect_ppx</code> subdirectory to work in.</p>
+<div id="css-attribution">
+  This page uses <a href="https://github.com/sindresorhus/github-markdown-css">github-markdown-css</a>.
+</div>
+
+</body>
+</html>

@@ -1,0 +1,240 @@
+<html>
+  <head>
+    <title>Coverage report for Bisect_ppx</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <div id="header">
+      <h1>
+        <a href="index.html">
+          <span class="dirname">src/report/</span>reportXML.ml
+        </a>
+      </h1>
+      <h2>100.00%</h2>
+    </div>
+    <div id="navbar">
+    </div>
+    <div id="report">
+      <div id="lines-layer">
+        <pre>
+<a id="L1"></a><span > </span>
+<a id="L2"></a><span > </span>
+<a id="L3"></a><span > </span>
+<a id="L4"></a><span > </span>
+<a id="L5"></a><span > </span>
+<a id="L6"></a><span > </span>
+<a id="L7"></a><span > </span>
+<a id="L8"></a><span > </span>
+<a id="L9"></a><span > </span>
+<a id="L10"></a><span > </span>
+<a id="L11"></a><span > </span>
+<a id="L12"></a><span > </span>
+<a id="L13"></a><span > </span>
+<a id="L14"></a><span > </span>
+<a id="L15"></a><span > </span>
+<a id="L16"></a><span > </span>
+<a id="L17"></a><span > </span>
+<a id="L18"></a><span > </span>
+<a id="L19"></a><span class="visited"> </span>
+<a id="L20"></a><span > </span>
+<a id="L21"></a><span > </span>
+<a id="L22"></a><span > </span>
+<a id="L23"></a><span > </span>
+<a id="L24"></a><span > </span>
+<a id="L25"></a><span > </span>
+<a id="L26"></a><span > </span>
+<a id="L27"></a><span > </span>
+<a id="L28"></a><span > </span>
+<a id="L29"></a><span > </span>
+<a id="L30"></a><span > </span>
+<a id="L31"></a><span > </span>
+<a id="L32"></a><span > </span>
+<a id="L33"></a><span > </span>
+<a id="L34"></a><span > </span>
+<a id="L35"></a><span > </span>
+<a id="L36"></a><span > </span>
+<a id="L37"></a><span > </span>
+<a id="L38"></a><span > </span>
+<a id="L39"></a><span class="visited"> </span>
+<a id="L40"></a><span > </span>
+<a id="L41"></a><span > </span>
+<a id="L42"></a><span class="visited"> </span>
+<a id="L43"></a><span > </span>
+<a id="L44"></a><span > </span>
+<a id="L45"></a><span > </span>
+<a id="L46"></a><span > </span>
+<a id="L47"></a><span > </span>
+<a id="L48"></a><span class="visited"> </span>
+<a id="L49"></a><span class="visited"> </span>
+<a id="L50"></a><span class="visited"> </span>
+<a id="L51"></a><span class="visited"> </span>
+<a id="L52"></a><span class="visited"> </span>
+<a id="L53"></a><span class="visited"> </span>
+<a id="L54"></a><span class="visited"> </span>
+<a id="L55"></a><span class="visited"> </span>
+<a id="L56"></a><span > </span>
+<a id="L57"></a><span class="visited"> </span>
+<a id="L58"></a><span class="visited"> </span>
+<a id="L59"></a><span class="visited"> </span>
+<a id="L60"></a><span class="visited"> </span>
+<a id="L61"></a><span > </span>
+<a id="L62"></a><span class="visited"> </span>
+<a id="L63"></a><span > </span>
+<a id="L64"></a><span class="visited"> </span>
+<a id="L65"></a><span class="visited"> </span>
+<a id="L66"></a><span > </span>
+<a id="L67"></a><span > </span>
+<a id="L68"></a><span > </span>
+<a id="L69"></a><span > </span>
+</pre>
+      </div>
+      <div id="text-layer">
+        <pre id="line-numbers">
+<a href="#L1"> 1</a>
+<a href="#L2"> 2</a>
+<a href="#L3"> 3</a>
+<a href="#L4"> 4</a>
+<a href="#L5"> 5</a>
+<a href="#L6"> 6</a>
+<a href="#L7"> 7</a>
+<a href="#L8"> 8</a>
+<a href="#L9"> 9</a>
+<a href="#L10">10</a>
+<a href="#L11">11</a>
+<a href="#L12">12</a>
+<a href="#L13">13</a>
+<a href="#L14">14</a>
+<a href="#L15">15</a>
+<a href="#L16">16</a>
+<a href="#L17">17</a>
+<a href="#L18">18</a>
+<a href="#L19">19</a>
+<a href="#L20">20</a>
+<a href="#L21">21</a>
+<a href="#L22">22</a>
+<a href="#L23">23</a>
+<a href="#L24">24</a>
+<a href="#L25">25</a>
+<a href="#L26">26</a>
+<a href="#L27">27</a>
+<a href="#L28">28</a>
+<a href="#L29">29</a>
+<a href="#L30">30</a>
+<a href="#L31">31</a>
+<a href="#L32">32</a>
+<a href="#L33">33</a>
+<a href="#L34">34</a>
+<a href="#L35">35</a>
+<a href="#L36">36</a>
+<a href="#L37">37</a>
+<a href="#L38">38</a>
+<a href="#L39">39</a>
+<a href="#L40">40</a>
+<a href="#L41">41</a>
+<a href="#L42">42</a>
+<a href="#L43">43</a>
+<a href="#L44">44</a>
+<a href="#L45">45</a>
+<a href="#L46">46</a>
+<a href="#L47">47</a>
+<a href="#L48">48</a>
+<a href="#L49">49</a>
+<a href="#L50">50</a>
+<a href="#L51">51</a>
+<a href="#L52">52</a>
+<a href="#L53">53</a>
+<a href="#L54">54</a>
+<a href="#L55">55</a>
+<a href="#L56">56</a>
+<a href="#L57">57</a>
+<a href="#L58">58</a>
+<a href="#L59">59</a>
+<a href="#L60">60</a>
+<a href="#L61">61</a>
+<a href="#L62">62</a>
+<a href="#L63">63</a>
+<a href="#L64">64</a>
+<a href="#L65">65</a>
+<a href="#L66">66</a>
+<a href="#L67">67</a>
+<a href="#L68">68</a>
+<a href="#L69">69</a>
+</pre>
+        <pre id="code">
+(*
+ * This file is part of Bisect.
+ * Copyright (C) 2008-2012 Xavier Clerc.
+ *
+ * Bisect is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Bisect is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+ *)
+
+let dtd = <span data-count="42">[</span>
+  "&lt;!ELEMENT bisect-report (summary,file*)&gt;" ;
+  "" ;
+  "&lt;!ELEMENT file (summary,point*)&gt;" ;
+  "&lt;!ATTLIST file path CDATA #REQUIRED&gt;" ;
+  "" ;
+  "&lt;!ELEMENT summary (element*)&gt;" ;
+  "" ;
+  "&lt;!ELEMENT element EMPTY&gt;" ;
+  "&lt;!ATTLIST element kind CDATA #REQUIRED&gt;" ;
+  "&lt;!ATTLIST element count CDATA #REQUIRED&gt;" ;
+  "&lt;!ATTLIST element total CDATA #REQUIRED&gt;" ;
+  "" ;
+  "&lt;!ELEMENT point EMPTY&gt;" ;
+  "&lt;!ATTLIST point offset CDATA #REQUIRED&gt;" ;
+  "&lt;!ATTLIST point count CDATA #REQUIRED&gt;" ;
+  "&lt;!ATTLIST point kind CDATA #REQUIRED&gt;" ;
+  ""
+]
+
+let xml_header = <span data-count="42">"</span>&lt;?xml version=\"1.0\" encoding=\"iso-8859-1\"?&gt;\n"
+
+let time_comment () =
+  <span data-count="6">P</span>rintf.sprintf "&lt;!-- generated by Bisect %s (%s) on %s --&gt;\n"
+    Version.value
+    ReportUtils.url
+    (ReportUtils.current_time ())
+
+let make () =
+  <span data-count="6">o</span>bject (self)
+    method header = <span data-count="6">x</span>ml_header ^ (time_comment ()) ^ "&lt;bisect-report&gt;\n"
+    method footer = <span data-count="6">"</span>&lt;/bisect-report&gt;\n"
+    method summary s = <span data-count="6">s</span>elf#sum "  " s
+    method file_header f = <span data-count="6">P</span>rintf.sprintf "  &lt;file path=\"%s\"&gt;\n" f
+    method file_footer _ = <span data-count="6">P</span>rintf.sprintf "  &lt;/file&gt;\n"
+    method file_summary s = <span data-count="6">s</span>elf#sum "    " s
+    method point ofs nb k = <span data-count="168">P</span>rintf.sprintf "    &lt;point offset=\"%d\" count=\"%d\" kind=\"%s\"/&gt;\n" ofs nb (Common.string_of_point_kind k)
+    method private sum tabs s =
+      <span data-count="12">l</span>et line k x y =
+        <span data-count="168">P</span>rintf.sprintf "&lt;element kind=\"%s\" count=\"%d\" total=\"%d\"/&gt;" k x y in
+      <span data-count="12">l</span>et lines =
+        <span data-count="12">L</span>ist.map
+          (fun (k, v) -&gt;
+            <span data-count="156">l</span>ine (Common.string_of_point_kind k) v.ReportStat.count v.ReportStat.total)
+          s in
+      <span data-count="12">l</span>et x, y = <span data-count="12">R</span>eportStat.summarize s in
+      <span data-count="12">t</span>abs ^ "&lt;summary&gt;\n  " ^ tabs ^
+      (String.concat ("\n  " ^ tabs) lines) ^
+      "\n  " ^ tabs ^ (line "total" x y) ^
+      "\n" ^ tabs ^ "&lt;/summary&gt;\n"
+  end
+</pre>
+      </div>
+    </div>
+    <div id="footer">Generated on 2016-05-08 03:17:37 by <a href="https://github.com/aantron/bisect_ppx">Bisect_ppx</a> 1.1.0</div>
+    <script src="coverage.js"></script>
+  </body>
+</html>

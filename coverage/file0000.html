@@ -1,0 +1,170 @@
+<html>
+  <head>
+    <title>Coverage report for Bisect_ppx</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <div id="header">
+      <h1>
+        <a href="index.html">
+          <span class="dirname">src/report/</span>reportText.ml
+        </a>
+      </h1>
+      <h2>91.67%</h2>
+    </div>
+    <div id="navbar">
+      <span class="some-visited" style="top:53.33%"></span>
+      <span class="some-visited" style="top:57.78%"></span>
+    </div>
+    <div id="report">
+      <div id="lines-layer">
+        <pre>
+<a id="L1"></a><span > </span>
+<a id="L2"></a><span > </span>
+<a id="L3"></a><span > </span>
+<a id="L4"></a><span > </span>
+<a id="L5"></a><span > </span>
+<a id="L6"></a><span > </span>
+<a id="L7"></a><span > </span>
+<a id="L8"></a><span > </span>
+<a id="L9"></a><span > </span>
+<a id="L10"></a><span > </span>
+<a id="L11"></a><span > </span>
+<a id="L12"></a><span > </span>
+<a id="L13"></a><span > </span>
+<a id="L14"></a><span > </span>
+<a id="L15"></a><span > </span>
+<a id="L16"></a><span > </span>
+<a id="L17"></a><span > </span>
+<a id="L18"></a><span > </span>
+<a id="L19"></a><span > </span>
+<a id="L20"></a><span class="visited"> </span>
+<a id="L21"></a><span class="visited"> </span>
+<a id="L22"></a><span class="visited"> </span>
+<a id="L23"></a><span class="visited"> </span>
+<a id="L24"></a><span class="some-visited"> </span>
+<a id="L25"></a><span class="visited"> </span>
+<a id="L26"></a><span class="some-visited"> </span>
+<a id="L27"></a><span class="visited"> </span>
+<a id="L28"></a><span > </span>
+<a id="L29"></a><span class="visited"> </span>
+<a id="L30"></a><span class="visited"> </span>
+<a id="L31"></a><span class="visited"> </span>
+<a id="L32"></a><span class="visited"> </span>
+<a id="L33"></a><span > </span>
+<a id="L34"></a><span class="visited"> </span>
+<a id="L35"></a><span class="visited"> </span>
+<a id="L36"></a><span class="visited"> </span>
+<a id="L37"></a><span > </span>
+<a id="L38"></a><span class="visited"> </span>
+<a id="L39"></a><span > </span>
+<a id="L40"></a><span > </span>
+<a id="L41"></a><span > </span>
+<a id="L42"></a><span class="visited"> </span>
+<a id="L43"></a><span class="visited"> </span>
+<a id="L44"></a><span > </span>
+<a id="L45"></a><span > </span>
+</pre>
+      </div>
+      <div id="text-layer">
+        <pre id="line-numbers">
+<a href="#L1"> 1</a>
+<a href="#L2"> 2</a>
+<a href="#L3"> 3</a>
+<a href="#L4"> 4</a>
+<a href="#L5"> 5</a>
+<a href="#L6"> 6</a>
+<a href="#L7"> 7</a>
+<a href="#L8"> 8</a>
+<a href="#L9"> 9</a>
+<a href="#L10">10</a>
+<a href="#L11">11</a>
+<a href="#L12">12</a>
+<a href="#L13">13</a>
+<a href="#L14">14</a>
+<a href="#L15">15</a>
+<a href="#L16">16</a>
+<a href="#L17">17</a>
+<a href="#L18">18</a>
+<a href="#L19">19</a>
+<a href="#L20">20</a>
+<a href="#L21">21</a>
+<a href="#L22">22</a>
+<a href="#L23">23</a>
+<a href="#L24">24</a>
+<a href="#L25">25</a>
+<a href="#L26">26</a>
+<a href="#L27">27</a>
+<a href="#L28">28</a>
+<a href="#L29">29</a>
+<a href="#L30">30</a>
+<a href="#L31">31</a>
+<a href="#L32">32</a>
+<a href="#L33">33</a>
+<a href="#L34">34</a>
+<a href="#L35">35</a>
+<a href="#L36">36</a>
+<a href="#L37">37</a>
+<a href="#L38">38</a>
+<a href="#L39">39</a>
+<a href="#L40">40</a>
+<a href="#L41">41</a>
+<a href="#L42">42</a>
+<a href="#L43">43</a>
+<a href="#L44">44</a>
+<a href="#L45">45</a>
+</pre>
+        <pre id="code">
+(*
+ * This file is part of Bisect.
+ * Copyright (C) 2008-2012 Xavier Clerc.
+ *
+ * Bisect is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Bisect is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+ *)
+
+let make summary_only =
+  <span data-count="6">o</span>bject (self)
+    method header = <span data-count="4">"</span>"
+    method footer = <span data-count="4">"</span>"
+    method summary s = <span data-count="4">"</span>Summary:\n" ^ (self#sum s)
+    method file_header f = <span data-count="5">i</span>f not summary_only then <span data-count="5">P</span>rintf.sprintf "File '%s':\n" f else <span data-count="0">"</span>"
+    method file_footer _ = <span data-count="5">"</span>"
+    method file_summary s = <span data-count="5">i</span>f not summary_only then <span data-count="5">s</span>elf#sum s else <span data-count="0">"</span>"
+    method point _ _ _ = <span data-count="75">"</span>"
+    method private sum s =
+      <span data-count="9">l</span>et numbers x y =
+        <span data-count="126">i</span>f y &gt; 0 then
+          <span data-count="42">l</span>et p = <span data-count="42">(</span>(float_of_int x) *. 100.) /. (float_of_int y) in
+          <span data-count="42">P</span>rintf.sprintf "%d/%d (%.2f%%)" x y p
+        else
+          <span data-count="84">"</span>none" in
+      <span data-count="9">l</span>et lines =
+        <span data-count="9">L</span>ist.map
+          (fun (k, v) -&gt;
+            <span data-count="117">P</span>rintf.sprintf " - '%s' points: %s"
+              (Common.string_of_point_kind k)
+              (numbers v.ReportStat.count v.ReportStat.total))
+          s in
+      <span data-count="9">l</span>et x, y = <span data-count="9">R</span>eportStat.summarize s in
+      <span data-count="9">(</span>String.concat "\n" lines) ^ "\n" ^
+      " - total: " ^ (numbers x y) ^ "\n"
+  end
+</pre>
+      </div>
+    </div>
+    <div id="footer">Generated on 2016-05-08 03:17:37 by <a href="https://github.com/aantron/bisect_ppx">Bisect_ppx</a> 1.1.0</div>
+    <script src="coverage.js"></script>
+  </body>
+</html>

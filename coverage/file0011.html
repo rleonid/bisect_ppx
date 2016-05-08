@@ -1,0 +1,448 @@
+<html>
+  <head>
+    <title>Coverage report for Bisect_ppx</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <div id="header">
+      <h1>
+        <a href="index.html">
+          <span class="dirname">src/report/</span>report.ml
+        </a>
+      </h1>
+      <h2>67.90%</h2>
+    </div>
+    <div id="navbar">
+      <span class="some-visited" style="top:18.46%"></span>
+      <span class="unvisited" style="top:20.00%"></span>
+      <span class="unvisited" style="top:23.08%"></span>
+      <span class="unvisited" style="top:24.62%"></span>
+      <span class="unvisited" style="top:36.92%"></span>
+      <span class="unvisited" style="top:39.23%"></span>
+      <span class="unvisited" style="top:40.00%"></span>
+      <span class="unvisited" style="top:42.31%"></span>
+      <span class="unvisited" style="top:43.08%"></span>
+      <span class="unvisited" style="top:44.62%"></span>
+      <span class="some-visited" style="top:45.38%"></span>
+      <span class="some-visited" style="top:52.31%"></span>
+      <span class="unvisited" style="top:53.08%"></span>
+      <span class="unvisited" style="top:56.15%"></span>
+      <span class="unvisited" style="top:80.00%"></span>
+      <span class="unvisited" style="top:89.23%"></span>
+      <span class="unvisited" style="top:90.77%"></span>
+      <span class="unvisited" style="top:91.54%"></span>
+      <span class="unvisited" style="top:93.08%"></span>
+      <span class="unvisited" style="top:93.85%"></span>
+      <span class="unvisited" style="top:95.38%"></span>
+      <span class="unvisited" style="top:96.15%"></span>
+      <span class="unvisited" style="top:97.69%"></span>
+      <span class="unvisited" style="top:98.46%"></span>
+      <span class="unvisited" style="top:100.00%"></span>
+    </div>
+    <div id="report">
+      <div id="lines-layer">
+        <pre>
+<a id="L1"></a><span > </span>
+<a id="L2"></a><span > </span>
+<a id="L3"></a><span > </span>
+<a id="L4"></a><span > </span>
+<a id="L5"></a><span > </span>
+<a id="L6"></a><span > </span>
+<a id="L7"></a><span > </span>
+<a id="L8"></a><span > </span>
+<a id="L9"></a><span > </span>
+<a id="L10"></a><span > </span>
+<a id="L11"></a><span > </span>
+<a id="L12"></a><span > </span>
+<a id="L13"></a><span > </span>
+<a id="L14"></a><span > </span>
+<a id="L15"></a><span > </span>
+<a id="L16"></a><span > </span>
+<a id="L17"></a><span > </span>
+<a id="L18"></a><span > </span>
+<a id="L19"></a><span > </span>
+<a id="L20"></a><span > </span>
+<a id="L21"></a><span > </span>
+<a id="L22"></a><span > </span>
+<a id="L23"></a><span class="visited"> </span>
+<a id="L24"></a><span class="some-visited"> </span>
+<a id="L25"></a><span > </span>
+<a id="L26"></a><span class="unvisited"> </span>
+<a id="L27"></a><span > </span>
+<a id="L28"></a><span class="visited"> </span>
+<a id="L29"></a><span class="visited"> </span>
+<a id="L30"></a><span class="unvisited"> </span>
+<a id="L31"></a><span > </span>
+<a id="L32"></a><span class="unvisited"> </span>
+<a id="L33"></a><span class="visited"> </span>
+<a id="L34"></a><span > </span>
+<a id="L35"></a><span > </span>
+<a id="L36"></a><span class="visited"> </span>
+<a id="L37"></a><span > </span>
+<a id="L38"></a><span class="visited"> </span>
+<a id="L39"></a><span class="visited"> </span>
+<a id="L40"></a><span > </span>
+<a id="L41"></a><span class="visited"> </span>
+<a id="L42"></a><span > </span>
+<a id="L43"></a><span > </span>
+<a id="L44"></a><span class="visited"> </span>
+<a id="L45"></a><span > </span>
+<a id="L46"></a><span > </span>
+<a id="L47"></a><span > </span>
+<a id="L48"></a><span class="unvisited"> </span>
+<a id="L49"></a><span > </span>
+<a id="L50"></a><span > </span>
+<a id="L51"></a><span class="unvisited"> </span>
+<a id="L52"></a><span class="unvisited"> </span>
+<a id="L53"></a><span > </span>
+<a id="L54"></a><span > </span>
+<a id="L55"></a><span class="unvisited"> </span>
+<a id="L56"></a><span class="unvisited"> </span>
+<a id="L57"></a><span > </span>
+<a id="L58"></a><span class="unvisited"> </span>
+<a id="L59"></a><span class="some-visited"> </span>
+<a id="L60"></a><span class="visited"> </span>
+<a id="L61"></a><span class="visited"> </span>
+<a id="L62"></a><span class="visited"> </span>
+<a id="L63"></a><span > </span>
+<a id="L64"></a><span class="visited"> </span>
+<a id="L65"></a><span class="visited"> </span>
+<a id="L66"></a><span class="visited"> </span>
+<a id="L67"></a><span class="visited"> </span>
+<a id="L68"></a><span class="some-visited"> </span>
+<a id="L69"></a><span class="unvisited"> </span>
+<a id="L70"></a><span class="visited"> </span>
+<a id="L71"></a><span class="visited"> </span>
+<a id="L72"></a><span class="visited"> </span>
+<a id="L73"></a><span class="unvisited"> </span>
+<a id="L74"></a><span > </span>
+<a id="L75"></a><span class="visited"> </span>
+<a id="L76"></a><span class="visited"> </span>
+<a id="L77"></a><span class="visited"> </span>
+<a id="L78"></a><span class="visited"> </span>
+<a id="L79"></a><span class="visited"> </span>
+<a id="L80"></a><span class="visited"> </span>
+<a id="L81"></a><span > </span>
+<a id="L82"></a><span class="visited"> </span>
+<a id="L83"></a><span > </span>
+<a id="L84"></a><span > </span>
+<a id="L85"></a><span class="visited"> </span>
+<a id="L86"></a><span > </span>
+<a id="L87"></a><span class="visited"> </span>
+<a id="L88"></a><span > </span>
+<a id="L89"></a><span class="visited"> </span>
+<a id="L90"></a><span > </span>
+<a id="L91"></a><span class="visited"> </span>
+<a id="L92"></a><span > </span>
+<a id="L93"></a><span class="visited"> </span>
+<a id="L94"></a><span > </span>
+<a id="L95"></a><span class="visited"> </span>
+<a id="L96"></a><span > </span>
+<a id="L97"></a><span class="visited"> </span>
+<a id="L98"></a><span class="visited"> </span>
+<a id="L99"></a><span class="visited"> </span>
+<a id="L100"></a><span > </span>
+<a id="L101"></a><span > </span>
+<a id="L102"></a><span class="visited"> </span>
+<a id="L103"></a><span class="visited"> </span>
+<a id="L104"></a><span class="unvisited"> </span>
+<a id="L105"></a><span class="visited"> </span>
+<a id="L106"></a><span class="visited"> </span>
+<a id="L107"></a><span > </span>
+<a id="L108"></a><span > </span>
+<a id="L109"></a><span class="visited"> </span>
+<a id="L110"></a><span > </span>
+<a id="L111"></a><span class="visited"> </span>
+<a id="L112"></a><span > </span>
+<a id="L113"></a><span class="visited"> </span>
+<a id="L114"></a><span > </span>
+<a id="L115"></a><span class="visited"> </span>
+<a id="L116"></a><span class="unvisited"> </span>
+<a id="L117"></a><span > </span>
+<a id="L118"></a><span class="unvisited"> </span>
+<a id="L119"></a><span class="unvisited"> </span>
+<a id="L120"></a><span > </span>
+<a id="L121"></a><span class="unvisited"> </span>
+<a id="L122"></a><span class="unvisited"> </span>
+<a id="L123"></a><span > </span>
+<a id="L124"></a><span class="unvisited"> </span>
+<a id="L125"></a><span class="unvisited"> </span>
+<a id="L126"></a><span > </span>
+<a id="L127"></a><span class="unvisited"> </span>
+<a id="L128"></a><span class="unvisited"> </span>
+<a id="L129"></a><span > </span>
+<a id="L130"></a><span class="unvisited"> </span>
+</pre>
+      </div>
+      <div id="text-layer">
+        <pre id="line-numbers">
+<a href="#L1">  1</a>
+<a href="#L2">  2</a>
+<a href="#L3">  3</a>
+<a href="#L4">  4</a>
+<a href="#L5">  5</a>
+<a href="#L6">  6</a>
+<a href="#L7">  7</a>
+<a href="#L8">  8</a>
+<a href="#L9">  9</a>
+<a href="#L10"> 10</a>
+<a href="#L11"> 11</a>
+<a href="#L12"> 12</a>
+<a href="#L13"> 13</a>
+<a href="#L14"> 14</a>
+<a href="#L15"> 15</a>
+<a href="#L16"> 16</a>
+<a href="#L17"> 17</a>
+<a href="#L18"> 18</a>
+<a href="#L19"> 19</a>
+<a href="#L20"> 20</a>
+<a href="#L21"> 21</a>
+<a href="#L22"> 22</a>
+<a href="#L23"> 23</a>
+<a href="#L24"> 24</a>
+<a href="#L25"> 25</a>
+<a href="#L26"> 26</a>
+<a href="#L27"> 27</a>
+<a href="#L28"> 28</a>
+<a href="#L29"> 29</a>
+<a href="#L30"> 30</a>
+<a href="#L31"> 31</a>
+<a href="#L32"> 32</a>
+<a href="#L33"> 33</a>
+<a href="#L34"> 34</a>
+<a href="#L35"> 35</a>
+<a href="#L36"> 36</a>
+<a href="#L37"> 37</a>
+<a href="#L38"> 38</a>
+<a href="#L39"> 39</a>
+<a href="#L40"> 40</a>
+<a href="#L41"> 41</a>
+<a href="#L42"> 42</a>
+<a href="#L43"> 43</a>
+<a href="#L44"> 44</a>
+<a href="#L45"> 45</a>
+<a href="#L46"> 46</a>
+<a href="#L47"> 47</a>
+<a href="#L48"> 48</a>
+<a href="#L49"> 49</a>
+<a href="#L50"> 50</a>
+<a href="#L51"> 51</a>
+<a href="#L52"> 52</a>
+<a href="#L53"> 53</a>
+<a href="#L54"> 54</a>
+<a href="#L55"> 55</a>
+<a href="#L56"> 56</a>
+<a href="#L57"> 57</a>
+<a href="#L58"> 58</a>
+<a href="#L59"> 59</a>
+<a href="#L60"> 60</a>
+<a href="#L61"> 61</a>
+<a href="#L62"> 62</a>
+<a href="#L63"> 63</a>
+<a href="#L64"> 64</a>
+<a href="#L65"> 65</a>
+<a href="#L66"> 66</a>
+<a href="#L67"> 67</a>
+<a href="#L68"> 68</a>
+<a href="#L69"> 69</a>
+<a href="#L70"> 70</a>
+<a href="#L71"> 71</a>
+<a href="#L72"> 72</a>
+<a href="#L73"> 73</a>
+<a href="#L74"> 74</a>
+<a href="#L75"> 75</a>
+<a href="#L76"> 76</a>
+<a href="#L77"> 77</a>
+<a href="#L78"> 78</a>
+<a href="#L79"> 79</a>
+<a href="#L80"> 80</a>
+<a href="#L81"> 81</a>
+<a href="#L82"> 82</a>
+<a href="#L83"> 83</a>
+<a href="#L84"> 84</a>
+<a href="#L85"> 85</a>
+<a href="#L86"> 86</a>
+<a href="#L87"> 87</a>
+<a href="#L88"> 88</a>
+<a href="#L89"> 89</a>
+<a href="#L90"> 90</a>
+<a href="#L91"> 91</a>
+<a href="#L92"> 92</a>
+<a href="#L93"> 93</a>
+<a href="#L94"> 94</a>
+<a href="#L95"> 95</a>
+<a href="#L96"> 96</a>
+<a href="#L97"> 97</a>
+<a href="#L98"> 98</a>
+<a href="#L99"> 99</a>
+<a href="#L100">100</a>
+<a href="#L101">101</a>
+<a href="#L102">102</a>
+<a href="#L103">103</a>
+<a href="#L104">104</a>
+<a href="#L105">105</a>
+<a href="#L106">106</a>
+<a href="#L107">107</a>
+<a href="#L108">108</a>
+<a href="#L109">109</a>
+<a href="#L110">110</a>
+<a href="#L111">111</a>
+<a href="#L112">112</a>
+<a href="#L113">113</a>
+<a href="#L114">114</a>
+<a href="#L115">115</a>
+<a href="#L116">116</a>
+<a href="#L117">117</a>
+<a href="#L118">118</a>
+<a href="#L119">119</a>
+<a href="#L120">120</a>
+<a href="#L121">121</a>
+<a href="#L122">122</a>
+<a href="#L123">123</a>
+<a href="#L124">124</a>
+<a href="#L125">125</a>
+<a href="#L126">126</a>
+<a href="#L127">127</a>
+<a href="#L128">128</a>
+<a href="#L129">129</a>
+<a href="#L130">130</a>
+</pre>
+        <pre id="code">
+(*
+ * This file is part of Bisect.
+ * Copyright (C) 2008-2012 Xavier Clerc.
+ *
+ * Bisect is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Bisect is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+ *)
+
+open ReportUtils
+
+
+let main () =
+  <span data-count="42">R</span>eportArgs.parse ();
+  <span data-count="38">i</span>f !ReportArgs.outputs = [] then <span data-count="0">b</span>egin
+    ReportArgs.print_usage ();
+    <span data-count="0">e</span>xit 0
+  end;
+  <span data-count="38">l</span>et data =
+    <span data-count="38">m</span>atch !ReportArgs.files, !ReportArgs.combine_expr with
+    | <span data-count="0">[</span>], None -&gt;
+        prerr_endline " *** warning: neither input file nor expression provided";
+        <span data-count="0">e</span>xit 0
+    | <span data-count="32">(</span>_ :: _), None -&gt;
+        List.fold_right
+          (fun s acc -&gt;
+            <span data-count="54">L</span>ist.iter
+              (fun (k, arr) -&gt;
+                <span data-count="58">l</span>et arr' = <span data-count="58">t</span>ry (Hashtbl.find acc k) +| arr with <span data-count="36">N</span>ot_found -&gt; arr in
+                <span data-count="58">H</span>ashtbl.replace acc k arr')
+              (Common.read_runtime_data s);
+            <span data-count="54">a</span>cc)
+          !ReportArgs.files
+          (Hashtbl.create 17)
+    | <span data-count="6">[</span>], Some expr -&gt;
+        (try
+          Combine.eval expr
+        with
+        | <span data-count="0">C</span>ombine.Exception e -&gt;
+            Printf.eprintf " *** combine expression error: %s\n"
+              (Combine.string_of_error e);
+            <span data-count="0">e</span>xit 1
+        | <span data-count="0">e</span> -&gt;
+            Printf.eprintf " *** combine expression error: %s\n"
+              (Printexc.to_string e);
+            <span data-count="0">e</span>xit 1)
+    | <span data-count="0">(</span>_ :: _), Some _ -&gt;
+        prerr_endline " *** error: both input file(s) and expression provided";
+        <span data-count="0">e</span>xit 1 in
+  <span data-count="38">l</span>et verbose = <span data-count="38">i</span>f !ReportArgs.verbose then <span data-count="0">p</span>rint_endline else <span data-count="38">i</span>gnore in
+  <span data-count="38">l</span>et search_file l f =
+    <span data-count="39">l</span>et fail () =
+      <span data-count="4">i</span>f !ReportArgs.ignore_missing_files then <span data-count="2">N</span>one
+      else
+        <span data-count="2">r</span>aise (Sys_error (f ^ ": No such file or directory")) in
+    <span data-count="39">l</span>et rec search = <span data-count="39">f</span>unction
+      | <span data-count="35">h</span>d :: tl -&gt;
+          let f' = <span data-count="35">F</span>ilename.concat hd f in
+          <span data-count="35">i</span>f Sys.file_exists f' then <span data-count="35">S</span>ome f' else <span data-count="0">s</span>earch tl
+      | <span data-count="0">[</span>] -&gt; fail () in
+    <span data-count="39">i</span>f Filename.is_implicit f then
+      <span data-count="35">s</span>earch l
+    else <span data-count="4">i</span>f Sys.file_exists f then
+      <span data-count="0">S</span>ome f
+    else
+      <span data-count="4">f</span>ail () in
+  <span data-count="38">l</span>et search_in_path = <span data-count="38">s</span>earch_file !ReportArgs.search_path in
+  <span data-count="38">l</span>et generic_output file conv =
+    <span data-count="32">R</span>eportGeneric.output verbose file conv search_in_path data in
+  <span data-count="38">l</span>et write_output = <span data-count="38">f</span>unction
+    | <span data-count="4">R</span>eportArgs.Html_output dir -&gt;
+        mkdirs dir;
+        <span data-count="4">R</span>eportHTML.output verbose dir
+          !ReportArgs.tab_size !ReportArgs.title
+          search_in_path data
+    | <span data-count="6">R</span>eportArgs.Xml_output file -&gt;
+        generic_output file (ReportXML.make ())
+    | <span data-count="4">R</span>eportArgs.Xml_emma_output file -&gt;
+        generic_output file (ReportXMLEmma.make ())
+    | <span data-count="4">R</span>eportArgs.Csv_output file -&gt;
+        generic_output file (ReportCSV.make !ReportArgs.separator)
+    | <span data-count="6">R</span>eportArgs.Text_output file -&gt;
+        generic_output file (ReportText.make !ReportArgs.summary_only)
+    | <span data-count="12">R</span>eportArgs.Dump_output file -&gt;
+        generic_output file (ReportDump.make ())
+    | <span data-count="2">R</span>eportArgs.Bisect_output file -&gt;
+      let write chan =
+        <span data-count="2">l</span>et data =
+          <span data-count="2">H</span>ashtbl.fold
+            (fun k v acc -&gt; <span data-count="2">(</span>k, v) :: acc)
+            data
+            [] in
+        <span data-count="2">C</span>ommon.write_runtime_data chan data in
+      <span data-count="2">m</span>atch file with
+      | <span data-count="0">"</span>-" -&gt; set_binary_mode_out stdout true; <span data-count="0">w</span>rite stdout
+      | <span data-count="2">_</span> -&gt; Common.try_out_channel true file write in
+  <span data-count="38">L</span>ist.iter write_output (List.rev !ReportArgs.outputs)
+
+let () =
+  <span data-count="42">t</span>ry
+    main ();
+    <span data-count="36">e</span>xit 0
+  with
+  | <span data-count="2">S</span>ys_error s -&gt;
+      Printf.eprintf " *** system error: %s\n" s;
+      <span data-count="2">e</span>xit 1
+  | <span data-count="0">U</span>nix.Unix_error (e, _, _) -&gt;
+      Printf.eprintf " *** system error: %s\n" (Unix.error_message e);
+      <span data-count="0">e</span>xit 1
+  | <span data-count="0">C</span>ommon.Invalid_file s -&gt;
+      Printf.eprintf " *** invalid file: '%s'\n" s;
+      <span data-count="0">e</span>xit 1
+  | <span data-count="0">C</span>ommon.Unsupported_version s -&gt;
+      Printf.eprintf " *** unsupported file version: '%s'\n" s;
+      <span data-count="0">e</span>xit 1
+  | <span data-count="0">C</span>ommon.Modified_file s -&gt;
+      Printf.eprintf " *** source file modified since instrumentation: '%s'\n" s;
+      <span data-count="0">e</span>xit 1
+  | <span data-count="0">e</span> -&gt;
+      Printf.eprintf " *** error: %s\n" (Printexc.to_string e);
+      <span data-count="0">e</span>xit 1
+</pre>
+      </div>
+    </div>
+    <div id="footer">Generated on 2016-05-08 03:17:37 by <a href="https://github.com/aantron/bisect_ppx">Bisect_ppx</a> 1.1.0</div>
+    <script src="coverage.js"></script>
+  </body>
+</html>
